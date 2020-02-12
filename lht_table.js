@@ -11,9 +11,9 @@
 var thisDay = new Date("August 30, 2018");
 var tableHTML = "<table id='eventTable'> ";
 tableHTML += "<caption>Upcoming Events</caption>";
-tableHTML += "<tr><th>Date</th><th>Event</th><th>price</th></tr>";
-
+tableHTML += "<tr><th>Date</th><th>Event</th><th>Price</th></tr>";
 var endDate = new Date(thisDay.getTime() + 14 * 24 * 60 * 60 * 1000);
+
 for(var i = 0; i < eventDates.length; i++){
    var eventDate = new Date(eventDates[i]);
    var eventDay = eventDate.toDateString();
@@ -27,5 +27,6 @@ for(var i = 0; i < eventDates.length; i++){
       tableHTML += "</tr>";
    }
 }
-tableHTML += "</table>";
+
+   tableHTML += "</table>";
 document.getElementById("eventList").innerHTML = tableHTML;
